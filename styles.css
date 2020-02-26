@@ -1,0 +1,375 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    background: #24252a;
+    height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 2000px;
+    /* border: 1px solid white; */
+    margin: auto;
+}
+
+/* navbar */
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 1px solid darkgray;
+}
+
+nav img {
+    max-width: 200px;
+    max-height: 200px;
+    width: 100px;
+    height: 100px;
+}
+
+nav ul {
+    display: flex;
+
+}
+
+nav ul li {
+    list-style: none;
+    padding-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: white;
+    font-weight: 500;
+    font-size: 15px;
+    color: white;
+}
+
+nav ul li a:hover {
+    color: lightblue;
+    border-bottom: 1px solid lightblue;
+    transition: 0.2s ease-in-out;
+}
+
+
+/* home section */
+.home-wrapper {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.home-wrapper .text {
+    margin-right: 200px;
+
+}
+
+.home-wrapper .text h1 {
+    color: #ffffff;
+    font-size: 3rem;
+}
+
+.home-wrapper .profile-image img {
+    border-radius: 50%;
+    margin-left: 200px;
+    cursor: context-menu;
+}
+
+.home-wrapper .text span {
+    display: inline-block;
+}
+
+span.name {
+    color: lightcoral;
+}
+
+.text p {
+    text-align: center;
+    color: white;
+    font-size: medium;
+    font-weight: 500;
+    padding-top: 10px;
+    letter-spacing: 3px;
+}
+
+.button-1 {
+    width: 150px;
+    height: 50px;
+    border: 1px solid lightcoral;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    margin: 20px 0 40px 50px;
+}
+
+.button-1 a {
+    font-size: 16px;
+    color: none;
+    text-decoration: none;
+    line-height: 50px;
+    transition: all 0.5s ease;
+    z-index: 2;
+    position: relative;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.eff-1 {
+    width: 150px;
+    height: 50px;
+    top: -50px;
+    background: lightcoral;
+    transition: all 0.5s ease;
+    position: absolute;
+    z-index: 1;
+}
+
+.button-1:hover .eff-1 {
+    top: 0;
+}
+
+.button-1:hover a {
+    color: #ffffff;
+    border-bottom: 2px solid white;
+}
+
+/* about me section */
+.about-me {
+    height: 40vh;
+    border-bottom: 1px solid darkgray;
+    margin-top: 40px;
+}
+
+.about-me .wrapper {
+    display: flex;
+    width: 50vw;
+    position: relative;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    color: white;
+    padding: 20px 10px;
+    letter-spacing: 2px;
+}
+
+.about-me p {
+    padding: 15px 0;
+    text-align: center;
+}
+
+
+/* my projects */
+.my-projects {
+    display: block;
+    margin-top: 30px;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.projects-container .card img {
+    width: 100px;
+    height: 100px;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    cursor: pointer;
+    margin-bottom: 100px;
+}
+
+.projects-container .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects-container .card .face.face1 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+}
+
+.projects-container .card:hover .face.face1 {
+    transform: translateY(0px);
+    transition: 0.3s ease;
+}
+
+.projects-container .card .face.face1 .content {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.projects-container .card:hover .face.face1 .content {
+    opacity: 1;
+
+}
+
+.projects-container .card .face.face1 .content h3 {
+    margin: 10px 0 0;
+    padding: 0;
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.projects-container .card:hover .face.face1 .content h3 {
+    font-size: 1.2rem;
+}
+
+.projects-container .card:hover .face.face1 .content .img {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.projects-container .card .face.face2 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100px);
+    opacity: 0;
+    height: 100px;
+    width: 150px;
+    padding: 10px;
+    text-align: center;
+}
+
+.projects-container .card .face.face2 p {
+    padding-bottom: 50px;
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.projects-container .card:hover .face.face2 {
+    transform: translateY(0px);
+    background: #24252a;
+    opacity: 1;
+    border: 1px solid white;
+    border-radius: 2px;
+}
+
+.projects-container .card .face.face2 .content {
+    padding-top: 2rem;
+}
+
+.projects-container .card .face.face2 p {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.projects-container .card .face.face2 a img {
+    width: 2rem;
+}
+
+/* contact page */
+
+.contact-wrapper {
+    border-top: 1px solid lightgray;
+}
+
+.contact-wrapper h1 {
+    margin-top: 30px;
+    color: white;
+    letter-spacing: 2px;
+}
+
+form .form,
+form textarea {
+    display: block;
+    width: 500px;
+    padding: 20px;
+    background-color: #24252a;
+    border: 3px solid #707070;
+    margin: 20px 0;
+    font-size: 1.2rem;
+    color: white;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%)
+}
+
+
+form .button-2 {
+    border: 1px solid lightcoral;
+    width: 150px;
+    height: 50px;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+    display: relative;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%)
+}
+
+form .button-2 a {
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    line-height: 50px;
+    transition: all 0.5s ease;
+    z-index: 2;
+    position: relative;
+}
+
+form .button-2 .eff-2 {
+    width: 150px;
+    height: 50px;
+    left: -150px;
+    background: lightcoral;
+    position: absolute;
+    transition: all 0.5s ease;
+    z-index: 1;
+}
+
+form .button-2:hover .eff-2 {
+    left: 0;
+}
+
+form .button-2:hover a {
+    border-bottom: 2px solid white;
+}
+
+
+footer hr {
+    border: 1px solid lightgray;
+    margin-top: 100px;
+}
+
+footer p {
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    padding: 20px 0;
+}
